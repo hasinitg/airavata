@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+
+
+    <servlet>
+        <servlet-name>OAuth2ClientServlet</servlet-name>
+        <servlet-class>org.apache.airavata.web.sample.OAuth2ClientServlet</servlet-class>
+        <init-param>
+            <description>appName</description>
+            <param-name>appName</param-name>
+            <param-value>airavata_web_client</param-value>
+        </init-param>
+        <init-param>
+            <description>consumerKey</description>
+            <param-name>consumerKey</param-name>
+            <param-value>buBjvhmiFmAwtROQvatz7V8DnUga</param-value>
+        </init-param>
+        <init-param>
+            <description>consumerSecret</description>
+            <param-name>consumerSecret</param-name>
+            <param-value>wMJPXb3NbWpZmidGndX98UyWjF0a</param-value>
+        </init-param>
+        <init-param>
+            <description>callBackUrl</description>
+            <param-name>callBackUrl</param-name>
+            <param-value>http://localhost:8080/web-based-oauth-client-app/openidconnect</param-value>
+        </init-param>
+        <init-param>
+            <description>authorizationServerUrl</description>
+            <param-name>authorizationServerUrl</param-name>
+            <param-value>https://localhost:9443/oauth2</param-value>
+        </init-param>
+        <init-param>
+            <description>trustStorePath</description>
+            <param-name>trustStorePath</param-name>
+            <param-value>/home/hasini/WillPower/MyHobbies/GSoC/airavata/airavata/modules/configuration/server/src/main/resources/client_truststore.jks</param-value>
+        </init-param>
+        <init-param>
+            <description>trustStorePassword</description>
+            <param-name>trustStorePassword</param-name>
+            <param-value>airavata</param-value>
+        </init-param>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>OpenIDConnectServlet</servlet-name>
+        <servlet-class>org.apache.airavata.web.sample.OpenIDConnectServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OAuth2ClientServlet</servlet-name>
+        <url-pattern>/oauth2client</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OpenIDConnectServlet</servlet-name>
+        <url-pattern>/openidconnect</url-pattern>
+    </servlet-mapping>
+</web-app>

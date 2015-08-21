@@ -557,6 +557,8 @@
 				<module>modules/credential-store</module>
 				<module>modules/orchestrator</module>
 				<module>modules/server</module>
+				<module>samples/oauth-client</module>
+				<module>samples/web-based-oauth-client</module>
 				<!--<module>modules/test-suite</module>-->
 				<!--<module>modules/integration-tests</module>-->
 				<!--<module>modules/workflow</module>-->

@@ -31,7 +31,6 @@ import org.wso2.carbon.identity.oauth.stub.OAuthAdminServiceStub;
 import org.wso2.carbon.identity.oauth.stub.dto.OAuthConsumerAppDTO;
 import org.wso2.carbon.utils.CarbonUtils;
 
-import javax.net.ssl.*;
 import java.rmi.RemoteException;
 
 public class OAuthAppRegisteringClient {
